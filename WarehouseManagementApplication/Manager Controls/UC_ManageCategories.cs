@@ -18,17 +18,24 @@ namespace WarehouseManagementApplication.Manager_Controls
         public UC_ManageCategories()
         {
             InitializeComponent();
+            Display();
         }
 
-        public void DisplayAndSearch(string query, DataGridView dgv)
+        public static void DisplayAndSearch(string query, DataGridView dgv)
         {
             string sql = query;
-            SqlConnection con = new SqlConnection(sql);
+            SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WarehouseManagementDB;Integrated Security=True");
+            con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataAdapter adp = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adp.Fill(dt);
+            DataTable dataTable = new DataTable();
+            adp.Fill(dataTable);
+            dgv.DataSource = dataTable;
             con.Close();
+        }
+        public void Display()
+        {
+            DisplayAndSearch("Select CategoryName,Description,Picture FROM Categories ", dataGridView1);
         }
 
         private void btnAddCategories_Click(object sender, EventArgs e)
