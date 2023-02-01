@@ -93,7 +93,7 @@ namespace WarehouseManagementApplication.Add_New
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(16, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 20);
@@ -104,13 +104,12 @@ namespace WarehouseManagementApplication.Add_New
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(256, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 25);
             this.label4.TabIndex = 16;
             this.label4.Text = "Add Category";
-          
             // 
             // txtDescription
             // 
@@ -123,7 +122,7 @@ namespace WarehouseManagementApplication.Add_New
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(57, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 20);
@@ -136,7 +135,7 @@ namespace WarehouseManagementApplication.Add_New
             this.btnSave.BackColor = System.Drawing.Color.SeaGreen;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(407, 339);
             this.btnSave.Name = "btnSave";
@@ -144,7 +143,7 @@ namespace WarehouseManagementApplication.Add_New
             this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
-         
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -152,7 +151,7 @@ namespace WarehouseManagementApplication.Add_New
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(256, 339);
             this.btnClose.Name = "btnClose";
@@ -160,12 +159,12 @@ namespace WarehouseManagementApplication.Add_New
             this.btnClose.TabIndex = 22;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(409, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
@@ -185,14 +184,14 @@ namespace WarehouseManagementApplication.Add_New
             // 
             this.btnUpload.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpload.Location = new System.Drawing.Point(485, 245);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(80, 38);
             this.btnUpload.TabIndex = 24;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
-        
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // Add_Categories
             // 
@@ -213,7 +212,7 @@ namespace WarehouseManagementApplication.Add_New
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Add_Categories";

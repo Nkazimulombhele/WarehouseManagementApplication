@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WarehouseManagementApplication.Add_New;
 
 namespace WarehouseManagementApplication.Manager_Controls
 {
@@ -15,6 +16,12 @@ namespace WarehouseManagementApplication.Manager_Controls
         public UC_ManageProducts()
         {
             InitializeComponent();
+        }
+
+        private void btnAddNewProduct_Click(object sender, EventArgs e)
+        {
+            Add_Products abn = new Add_Products();
+            abn.ShowDialog();
         }
     }
 }

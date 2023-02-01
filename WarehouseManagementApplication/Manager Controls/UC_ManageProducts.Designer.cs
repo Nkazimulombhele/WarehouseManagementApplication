@@ -32,8 +32,8 @@ namespace WarehouseManagementApplication.Manager_Controls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ManageProducts));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -173,6 +173,7 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.btnAddNewProduct.Text = " Add New Product";
             this.btnAddNewProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddNewProduct.UseVisualStyleBackColor = true;
+            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
             // 
             // panel6
             // 
@@ -214,62 +215,71 @@ namespace WarehouseManagementApplication.Manager_Controls
             // 
             this.Column2.HeaderText = "Product Name";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 220;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "SupplierId";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "CategoryId";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 200;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Quantity Per Unit";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 200;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Unit Price";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 150;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Units In Stock";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             this.Column7.Width = 170;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Units In Order";
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             this.Column8.Width = 200;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "ReorderLevel";
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             this.Column9.Width = 194;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "Discontinued";
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             this.Column10.Width = 200;
             // 
             // btnEdit
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnEdit.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnEdit.DefaultCellStyle = dataGridViewCellStyle1;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.HeaderText = "";
             this.btnEdit.Name = "btnEdit";
@@ -280,10 +290,10 @@ namespace WarehouseManagementApplication.Manager_Controls
             // 
             // btnDelete
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle2;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.HeaderText = "";
             this.btnDelete.Name = "btnDelete";

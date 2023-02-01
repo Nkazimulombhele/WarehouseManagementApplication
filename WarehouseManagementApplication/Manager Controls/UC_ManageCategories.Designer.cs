@@ -107,7 +107,7 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(165, 0);
             this.btnRefresh.Name = "btnRefresh";
@@ -123,7 +123,7 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.btnAddCategories.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAddCategories.FlatAppearance.BorderSize = 0;
             this.btnAddCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddCategories.ForeColor = System.Drawing.Color.White;
             this.btnAddCategories.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategories.Image")));
             this.btnAddCategories.Location = new System.Drawing.Point(0, 0);
@@ -133,13 +133,13 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.btnAddCategories.Text = "   Add Category";
             this.btnAddCategories.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddCategories.UseVisualStyleBackColor = true;
-           
+            this.btnAddCategories.Click += new System.EventHandler(this.btnAddCategories_Click);
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(388, 22);
             this.label5.Name = "label5";
@@ -202,7 +202,7 @@ namespace WarehouseManagementApplication.Manager_Controls
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -219,7 +219,7 @@ namespace WarehouseManagementApplication.Manager_Controls
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -242,7 +242,7 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Name = "UC_ManageCategories";
             this.Size = new System.Drawing.Size(985, 580);
             this.panel5.ResumeLayout(false);

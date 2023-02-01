@@ -120,6 +120,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add New\Add Categories.resx">
+      <DependentUpon>Add Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add New\Add Products.resx">
+      <DependentUpon>Add Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add New\Add Suppliers.resx">
+      <DependentUpon>Add Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Manager Dashboard.resx">
       <DependentUpon>Manager Dashboard.cs</DependentUpon>
     </EmbeddedResource>
