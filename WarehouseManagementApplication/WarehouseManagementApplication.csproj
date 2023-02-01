@@ -46,17 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add New\Add Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add New\Add Categories.Designer.cs">
+      <DependentUpon>Add Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add New\Add Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add New\Add Products.Designer.cs">
+      <DependentUpon>Add Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add New\Add Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add New\Add Suppliers.Designer.cs">
+      <DependentUpon>Add Suppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\Manager Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard\Manager Dashboard.Designer.cs">
       <DependentUpon>Manager Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Edit\Edit Categories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Edit\Edit Categories.Designer.cs">
+      <DependentUpon>Edit Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\Edit Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\Edit Products.Designer.cs">
+      <DependentUpon>Edit Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\Edit Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\Edit Suppliers.Designer.cs">
+      <DependentUpon>Edit Suppliers.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\ManagerLogin.cs">
       <SubType>Form</SubType>
@@ -92,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashboard\Manager Dashboard.resx">
       <DependentUpon>Manager Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\Edit Products.resx">
+      <DependentUpon>Edit Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\ManagerLogin.resx">
       <DependentUpon>ManagerLogin.cs</DependentUpon>
