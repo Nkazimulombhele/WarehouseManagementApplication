@@ -46,7 +46,6 @@ namespace WarehouseManagementApplication.Add_New
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUnitsOnOrder = new System.Windows.Forms.TextBox();
-            this.cmbDescontinued = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@ namespace WarehouseManagementApplication.Add_New
             this.txtQuantityPerUnit = new System.Windows.Forms.TextBox();
             this.txtSupplierId = new System.Windows.Forms.TextBox();
             this.txtCategoryId = new System.Windows.Forms.TextBox();
+            this.txtDiscontinued = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel2
@@ -208,17 +208,6 @@ namespace WarehouseManagementApplication.Add_New
             this.txtUnitsOnOrder.Size = new System.Drawing.Size(177, 26);
             this.txtUnitsOnOrder.TabIndex = 13;
             // 
-            // cmbDescontinued
-            // 
-            this.cmbDescontinued.FormattingEnabled = true;
-            this.cmbDescontinued.Items.AddRange(new object[] {
-            "yes",
-            "no"});
-            this.cmbDescontinued.Location = new System.Drawing.Point(176, 339);
-            this.cmbDescontinued.Name = "cmbDescontinued";
-            this.cmbDescontinued.Size = new System.Drawing.Size(177, 28);
-            this.cmbDescontinued.TabIndex = 21;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -292,16 +281,23 @@ namespace WarehouseManagementApplication.Add_New
             this.txtCategoryId.Size = new System.Drawing.Size(179, 26);
             this.txtCategoryId.TabIndex = 14;
             // 
+            // txtDiscontinued
+            // 
+            this.txtDiscontinued.Location = new System.Drawing.Point(176, 339);
+            this.txtDiscontinued.Name = "txtDiscontinued";
+            this.txtDiscontinued.Size = new System.Drawing.Size(177, 26);
+            this.txtDiscontinued.TabIndex = 13;
+            // 
             // Add_Products
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(814, 523);
-            this.Controls.Add(this.cmbDescontinued);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSaveProductDetails);
             this.Controls.Add(this.txtReorderLevel);
             this.Controls.Add(this.txtQuantityPerUnit);
+            this.Controls.Add(this.txtDiscontinued);
             this.Controls.Add(this.txtUnitsOnOrder);
             this.Controls.Add(this.txtUnitsInStock);
             this.Controls.Add(this.txtSupplierId);
@@ -328,6 +324,7 @@ namespace WarehouseManagementApplication.Add_New
             this.Name = "Add_Products";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_AddNewBook";
+            this.Load += new System.EventHandler(this.Add_Products_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,7 +348,6 @@ namespace WarehouseManagementApplication.Add_New
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUnitsOnOrder;
-        private System.Windows.Forms.ComboBox cmbDescontinued;
         private System.Windows.Forms.Label label11;
         //private DragControlDemo.DragControl dragControl1;
         private System.Windows.Forms.Button btnClose;
@@ -361,5 +357,6 @@ namespace WarehouseManagementApplication.Add_New
         private TextBox txtQuantityPerUnit;
         private TextBox txtSupplierId;
         private TextBox txtCategoryId;
+        private TextBox txtDiscontinued;
     }
 }

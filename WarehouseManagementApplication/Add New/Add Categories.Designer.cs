@@ -177,6 +177,7 @@ namespace WarehouseManagementApplication.Add_New
             this.PictureUploadBox.Location = new System.Drawing.Point(480, 133);
             this.PictureUploadBox.Name = "PictureUploadBox";
             this.PictureUploadBox.Size = new System.Drawing.Size(147, 97);
+            this.PictureUploadBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureUploadBox.TabIndex = 23;
             this.PictureUploadBox.TabStop = false;
             // 

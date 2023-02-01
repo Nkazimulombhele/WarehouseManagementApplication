@@ -65,7 +65,7 @@ namespace WarehouseManagementApplication.Add_New
                 MessageBox.Show("ReorderLevel Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (cmbDescontinued.Text.Equals(string.Empty))
+            if (txtDiscontinued.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Descontinued Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -81,7 +81,7 @@ namespace WarehouseManagementApplication.Add_New
                 _productEntity.unitsInStock = Convert.ToInt32(txtUnitsInStock.Text);
                 _productEntity.unitsOnOrder = Convert.ToInt32(txtUnitsOnOrder.Text);
                 _productEntity.reorderLevel = Convert.ToInt32(txtReorderLevel.Text);
-                _productEntity.discontinued = (string)cmbDescontinued.SelectedItem;
+                _productEntity.discontinued = txtDiscontinued.Text;
 
 
                 if (_productBusinessAccess.productinsertDetails(_productEntity) > 0)
@@ -99,6 +99,11 @@ namespace WarehouseManagementApplication.Add_New
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Add_Products_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

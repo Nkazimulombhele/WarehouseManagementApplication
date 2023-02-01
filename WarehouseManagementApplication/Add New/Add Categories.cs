@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WarehouseManagementApplication.Add_New
 {
@@ -24,19 +25,22 @@ namespace WarehouseManagementApplication.Add_New
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            string image = "";
-            try
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                    image = ofd.FileName;
-                PictureUploadBox.ImageLocation = image;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error occured!");
+            
+            //try
+            //{
+            //    OpenFileDialog ofd = new OpenFileDialog();
+            //    if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //    {
+            //        //PictureUploadBox.Image = Bitmap(ofd.FileName);
+            //    }
 
-            }
+                   
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Error occured!");
+
+            //}
         }
 
         private void btnSave_Click(object sender, EventArgs e)

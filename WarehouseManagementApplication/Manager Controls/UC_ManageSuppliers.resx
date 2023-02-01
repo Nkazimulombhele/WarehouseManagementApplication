@@ -120,10 +120,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAddNewSupplier.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAB1SURBVDhPY8AFfOo3cQVUbDEGYRAbKkw8AGksXXT7PwiD
-        2FBh4gFIU/2qJ/9BeLgbgBzayNivels0zAAQG5sacOyAGKCQhilGxp1b34ExNjl47FBsAMVewAVACmAG
-        gNhQYeLBMDEAFNLw0CYVIMcO7tBmYAAAFekClC6gnvQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAHVJREFUOE9jwAV86jdxBVRsMQZhEBsqTDwAaSxddPs/CIPYUGHiAUhT/aon/0F4
+        uBuAHNrI2K96WzTMABAbmxpw7IAYoJCGKUbGnVvfgTE2OXjsUGwAxV7ABUAKYAaA2FBh4sEwMQAU0vDQ
+        JhUgxw7u0GZgAAAV6QKULqCe9AAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

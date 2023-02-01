@@ -18,7 +18,7 @@ namespace WarehouseManagementApplication.Login
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WarehouseManagementDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WarehouseManagementDB;Integrated Security=False");
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
