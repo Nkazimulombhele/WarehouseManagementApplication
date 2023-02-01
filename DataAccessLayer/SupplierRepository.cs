@@ -11,7 +11,7 @@ namespace DataAccessLayer
 {
     public class SupplierRepository
     {
-        public SqlConnection con = new SqlConnection("Data Source=(Localdb)\\MSSQLLocalDB;Initial Catalog=WarehouseManagementDB;Integrated Security=True");
+        public SqlConnection con = new SqlConnection("Data Source=(Localdb)\\MSSQLLocalDB;Initial Catalog=WarehouseManagementDB;Integrated Security=True,MultipleActiveResultSets=true");
         public SqlCommand cmd = new SqlCommand();
 
         public int supplierinsert(SupplierEntity supplierEntity)

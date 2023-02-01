@@ -104,5 +104,12 @@ namespace WarehouseManagementApplication.Dashboard
             ManagerLogin login = new ManagerLogin();
             login.ShowDialog();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ManagerLogin login = new ManagerLogin();
+            login.ShowDialog();
+        }
     }
 }
