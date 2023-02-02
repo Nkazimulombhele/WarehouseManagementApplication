@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using WarehouseManagementApplication.Dashboard;
 
 namespace WarehouseManagementApplication.Add_New
 {
@@ -76,6 +77,9 @@ namespace WarehouseManagementApplication.Add_New
                 {
                     MessageBox.Show("Category Inserted Successfully");
                 }
+                this.Close();
+                Manager_Dashboard manager_Dashboard = new Manager_Dashboard();
+                manager_Dashboard.ShowDialog();
             }
         }
 
