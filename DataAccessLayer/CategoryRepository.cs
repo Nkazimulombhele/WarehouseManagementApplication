@@ -24,12 +24,10 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@CategoryName", categoryEntity.categoryname);
             cmd.Parameters.AddWithValue("@Description", categoryEntity.description);
             cmd.Parameters.AddWithValue("@Picture", categoryEntity.picture);
+            con.Close();
 
-
-            int i = cmd.ExecuteNonQuery();
-            return i;
-
-
+            return cmd.ExecuteNonQuery();
+           
         }
 
         public int categoryUpdate(CategoryEntity categoryEntity, int id)

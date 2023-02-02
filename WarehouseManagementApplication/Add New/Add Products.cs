@@ -36,7 +36,7 @@ namespace WarehouseManagementApplication.Add_New
             }
             if (txtCategoryId.Text.Equals(string.Empty))
             {
-                MessageBox.Show("ProductId Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("CategoryId Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtQuantityPerUnit.Text.Equals(string.Empty))

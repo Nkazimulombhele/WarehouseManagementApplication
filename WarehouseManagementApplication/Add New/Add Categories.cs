@@ -22,29 +22,29 @@ namespace WarehouseManagementApplication.Add_New
         {
             InitializeComponent();
         }
-
+        
+        string imgLocation = "";
+        
         private void btnUpload_Click(object sender, EventArgs e)
         {
             
-            //try
-            //{
-            //    OpenFileDialog ofd = new OpenFileDialog();
-            //    if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //    {
-            //        //PictureUploadBox.Image = Bitmap(ofd.FileName);
-            //    }
+        
+               OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|all files(*.*)|*.*";
 
-                   
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("Error occured!");
+              if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+              {
+                imgLocation = ofd.FileName.ToString();
+                PictureUploadBox.ImageLocation = imgLocation;
+             }
 
-            //}
+                  
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+        
+
             if (txtCategoryName.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Category Name Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -55,16 +55,22 @@ namespace WarehouseManagementApplication.Add_New
                 MessageBox.Show("Description Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (PictureUploadBox.Text.Equals(string.Empty))
-            {
-                MessageBox.Show("Category Picture not Uploaded!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (PictureUploadBox.Text.Equals(string.Empty))
+            //{
+            //    MessageBox.Show("Category Picture not Uploaded!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+            
             if (btnSave.Text == "Save")
             {
+                byte[] images = null;
+                FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(Streem);
+                images = brs.ReadBytes((int)Streem.Length);
+
                 _categoryEntity.categoryname = txtCategoryName.Text;
                 _categoryEntity.description = txtDescription.Text;
-                _categoryEntity.picture = PictureUploadBox.Text;
+                _categoryEntity.picture = "@images";
 
                 if (_categoryBusinessAccess.categoryinsertDetails(_categoryEntity) > 0)
                 {
