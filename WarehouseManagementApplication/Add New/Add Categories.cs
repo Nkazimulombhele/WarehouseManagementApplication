@@ -71,16 +71,19 @@ namespace WarehouseManagementApplication.Add_New
 
                 _categoryEntity.categoryname = txtCategoryName.Text;
                 _categoryEntity.description = txtDescription.Text;
-                _categoryEntity.picture = "@images";
+                _categoryEntity.picture = Convert.ToByte(images.Length);
 
                 if (_categoryBusinessAccess.categoryinsertDetails(_categoryEntity) > 0)
                 {
                     MessageBox.Show("Category Inserted Successfully");
                 }
-                this.Close();
-                Manager_Dashboard manager_Dashboard = new Manager_Dashboard();
-                manager_Dashboard.ShowDialog();
+              
+               
             }
+            Manager_Dashboard home = new Manager_Dashboard();
+            home.ShowDialog();
+            this.Dispose();
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -29,8 +29,8 @@ namespace WarehouseManagementApplication.Login
             string emailAddress, password;
 
 
-            try
-            {
+            //try
+            //{
                 String Query = "SELECT * FROM dbo.ManagerLogin WHERE EmailAddress ='" + txtUsername.Text + "' AND Password = '" + txtpassword.Text + "' ";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, con);
 
@@ -54,16 +54,16 @@ namespace WarehouseManagementApplication.Login
                     txtpassword.Clear();
                 }
 
-
-            }
-            catch
-            {
-                MessageBox.Show("Error");
-            }
-            finally
-            {
-                con.Close();
-            }
+            con.Close();
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Error");
+            //}
+            //finally
+            //{
+            //    con.Close();
+            //}
         }
     }
 }

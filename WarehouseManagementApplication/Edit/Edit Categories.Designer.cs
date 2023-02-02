@@ -45,6 +45,8 @@ namespace WarehouseManagementApplication.Edit
             this.PictureUploadBox = new System.Windows.Forms.PictureBox();
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCategoryId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureUploadBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +88,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             // txtCategoryName
             // 
-            this.txtCategoryName.Location = new System.Drawing.Point(160, 129);
+            this.txtCategoryName.Location = new System.Drawing.Point(177, 157);
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(207, 26);
             this.txtCategoryName.TabIndex = 17;
@@ -94,8 +96,8 @@ namespace WarehouseManagementApplication.Edit
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(16, 133);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(33, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 20);
             this.label6.TabIndex = 15;
@@ -105,7 +107,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(256, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(189, 25);
@@ -114,7 +116,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(161, 176);
+            this.txtDescription.Location = new System.Drawing.Point(169, 204);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(207, 96);
             this.txtDescription.TabIndex = 18;
@@ -123,8 +125,8 @@ namespace WarehouseManagementApplication.Edit
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(57, 180);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(65, 208);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 15;
@@ -136,7 +138,7 @@ namespace WarehouseManagementApplication.Edit
             this.btnUpdate.BackColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(407, 339);
             this.btnUpdate.Name = "btnUpdate";
@@ -144,12 +146,13 @@ namespace WarehouseManagementApplication.Edit
             this.btnUpdate.TabIndex = 21;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(409, 133);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(417, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 15;
@@ -158,9 +161,10 @@ namespace WarehouseManagementApplication.Edit
             // PictureUploadBox
             // 
             this.PictureUploadBox.BackColor = System.Drawing.Color.Gainsboro;
-            this.PictureUploadBox.Location = new System.Drawing.Point(480, 133);
+            this.PictureUploadBox.Location = new System.Drawing.Point(488, 161);
             this.PictureUploadBox.Name = "PictureUploadBox";
             this.PictureUploadBox.Size = new System.Drawing.Size(147, 97);
+            this.PictureUploadBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureUploadBox.TabIndex = 23;
             this.PictureUploadBox.TabStop = false;
             // 
@@ -168,13 +172,14 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.btnUpload.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUpload.Location = new System.Drawing.Point(485, 245);
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpload.Location = new System.Drawing.Point(493, 273);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(80, 38);
             this.btnUpload.TabIndex = 24;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // btnClose
             // 
@@ -182,7 +187,7 @@ namespace WarehouseManagementApplication.Edit
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(256, 339);
             this.btnClose.Name = "btnClose";
@@ -190,9 +195,26 @@ namespace WarehouseManagementApplication.Edit
             this.btnClose.TabIndex = 22;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // Update_Categories
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(42, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Category Id:";
+            // 
+            // txtCategoryId
+            // 
+            this.txtCategoryId.Location = new System.Drawing.Point(177, 113);
+            this.txtCategoryId.Name = "txtCategoryId";
+            this.txtCategoryId.Size = new System.Drawing.Size(207, 26);
+            this.txtCategoryId.TabIndex = 17;
+            // 
+            // Edit_Categories
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -203,18 +225,20 @@ namespace WarehouseManagementApplication.Edit
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCategoryId);
             this.Controls.Add(this.txtCategoryName);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Update_Categories";
+            this.Name = "Edit_Categories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_UpdateCategory";
             ((System.ComponentModel.ISupportInitialize)(this.PictureUploadBox)).EndInit();
@@ -239,5 +263,7 @@ namespace WarehouseManagementApplication.Edit
         private PictureBox PictureUploadBox;
         private Button btnUpload;
         private Button btnClose;
+        private Label label3;
+        private TextBox txtCategoryId;
     }
 }

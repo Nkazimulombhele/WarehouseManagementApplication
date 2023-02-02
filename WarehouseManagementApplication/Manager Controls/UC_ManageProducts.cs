@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WarehouseManagementApplication.Add_New;
+using WarehouseManagementApplication.Delete;
+using WarehouseManagementApplication.Edit;
 
 namespace WarehouseManagementApplication.Manager_Controls
 {
@@ -42,5 +44,16 @@ namespace WarehouseManagementApplication.Manager_Controls
             DisplayAndSearch("Select ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,discontinued FROM Products ", dataGridView1);
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Edit_Products abn = new Edit_Products();
+            abn.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete_Product abn = new Delete_Product();
+            abn.ShowDialog();
+        }
     }
 }

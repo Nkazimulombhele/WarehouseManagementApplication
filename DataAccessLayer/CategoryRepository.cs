@@ -30,34 +30,29 @@ namespace DataAccessLayer
            
         }
 
-        public int categoryUpdate(CategoryEntity categoryEntity, int id)
+        public int categoryUpdate(CategoryEntity categoryEntity)
         {
             cmd.Connection = con;
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "updateCategory_sp";
-
+            cmd.Parameters.AddWithValue("@CategoryId", categoryEntity.categoryId);
             cmd.Parameters.AddWithValue("@CategoryName", categoryEntity.categoryname);
             cmd.Parameters.AddWithValue("@Description", categoryEntity.description);
             cmd.Parameters.AddWithValue("@Picture", categoryEntity.picture);
 
-            int i = cmd.ExecuteNonQuery();
-            return i;
-
-
-
-
-
+              return  cmd.ExecuteNonQuery();
+           
         }
 
-        public int categoryDelete(int id)
+        public int categoryDelete(CategoryEntity categoryEntity)
         {
             cmd.Connection = con;
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "deleteCategory_sp";
 
-            cmd.Parameters.AddWithValue("@CategoryId", id);
+            cmd.Parameters.AddWithValue("@CategoryId", categoryEntity.categoryId);
 
             int i = cmd.ExecuteNonQuery();
             return i;

@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessEntityLayer;
 using WarehouseManagementApplication.Add_New;
+using WarehouseManagementApplication.Delete;
+using WarehouseManagementApplication.Edit;
 
 namespace WarehouseManagementApplication.Manager_Controls
 {
@@ -43,11 +45,16 @@ namespace WarehouseManagementApplication.Manager_Controls
             DisplayAndSearch("Select CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax,HomePage FROM Suppliers ", dataGridView);
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Edit_Suppliers As = new Edit_Suppliers();
+            As.ShowDialog();
+        }
 
-
-
-     
-
-      
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete_Supplier As = new Delete_Supplier();
+            As.ShowDialog();
+        }
     }
 }

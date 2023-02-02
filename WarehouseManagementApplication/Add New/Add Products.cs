@@ -89,11 +89,12 @@ namespace WarehouseManagementApplication.Add_New
                     MessageBox.Show("Product Inserted Successfully");
                 }
             }
-            this.Close();
-            Manager_Dashboard manager_Dashboard = new Manager_Dashboard();
-            manager_Dashboard.ShowDialog();
 
-        
+            Manager_Dashboard home = new Manager_Dashboard();
+            home.ShowDialog();
+            this.Dispose();
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

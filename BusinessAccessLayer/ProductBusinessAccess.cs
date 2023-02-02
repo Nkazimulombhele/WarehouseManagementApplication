@@ -18,13 +18,13 @@ namespace BusinessAccessLayer
         {
             return _productRepository.productinsert(productEntity);
         }
-        public int productupdateDetails(ProductEntity productEntity, int id)
+        public int productupdateDetails(ProductEntity productEntity)
         {
-            return _productRepository.productUpdate(productEntity, id);
+            return _productRepository.productUpdate(productEntity);
         }
-        public int productdeleteDetails(int id)
+        public int productdeleteDetails(ProductEntity productEntity)
         {
-            return _productRepository.productDelete(id);
+            return _productRepository.productDelete(productEntity);
         }
     }
 }

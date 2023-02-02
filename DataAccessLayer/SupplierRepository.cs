@@ -40,13 +40,13 @@ namespace DataAccessLayer
 
         }
 
-        public int supplierUpdate(SupplierEntity supplierEntity, int id)
+        public int supplierUpdate(SupplierEntity supplierEntity)
         {
             cmd.Connection = con;
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "updateSuppliers_sp";
-
+            cmd.Parameters.AddWithValue("@SupplierId", supplierEntity.supplierId);
             cmd.Parameters.AddWithValue("@CompanyName", supplierEntity.companyName);
             cmd.Parameters.AddWithValue("@ContactName", supplierEntity.contactName);
             cmd.Parameters.AddWithValue("@ContactTitle", supplierEntity.contactTitle);
@@ -67,14 +67,14 @@ namespace DataAccessLayer
 
         }
 
-        public int supplierDelete(int id)
+        public int supplierDelete(SupplierEntity supplierEntity)
         {
             cmd.Connection = con;
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "deleteSupplier_sp";
 
-            cmd.Parameters.AddWithValue("@SupplierId", id);
+            cmd.Parameters.AddWithValue("@SupplierId", supplierEntity.supplierId);
 
             int i = cmd.ExecuteNonQuery();
             return i;

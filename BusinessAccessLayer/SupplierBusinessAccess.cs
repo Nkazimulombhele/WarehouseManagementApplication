@@ -19,14 +19,14 @@ namespace BusinessAccessLayer
             return _supplierRepository.supplierinsert(supplierEntity);
         }
 
-        public int supplierUpdateDetails(SupplierEntity supplierEntity, int id)
+        public int supplierUpdateDetails(SupplierEntity supplierEntity)
         {
-            return _supplierRepository.supplierUpdate(supplierEntity, id);
+            return _supplierRepository.supplierUpdate(supplierEntity);
         }
 
-        public int supplierDeleteDetails(int id)
+        public int supplierDeleteDetails(SupplierEntity supplierEntity)
         {
-            return _supplierRepository.supplierDelete(id);
+            return _supplierRepository.supplierDelete(supplierEntity);
         }
     }
 }

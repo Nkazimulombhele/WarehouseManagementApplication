@@ -18,5 +18,13 @@ namespace BusinessAccessLayer
         {
             return _categoryRepository.categoryinsert(categoryEntity);
         }
+        public int categoryupdateDetails(CategoryEntity categoryEntity)
+        {
+            return _categoryRepository.categoryUpdate(categoryEntity);
+        }
+        public int categorydeleteDetails(CategoryEntity categoryEntity)
+        {
+            return _categoryRepository.categoryDelete(categoryEntity);
+        }
     }
 }

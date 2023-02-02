@@ -70,6 +70,24 @@
     <Compile Include="Dashboard\Manager Dashboard.Designer.cs">
       <DependentUpon>Manager Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delete\Delete Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete\Delete Category.Designer.cs">
+      <DependentUpon>Delete Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete\Delete Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete\Delete Product.Designer.cs">
+      <DependentUpon>Delete Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete\Delete Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete\Delete Supplier.Designer.cs">
+      <DependentUpon>Delete Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit\Edit Categories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +150,23 @@
     <EmbeddedResource Include="Dashboard\Manager Dashboard.resx">
       <DependentUpon>Manager Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Delete\Delete Category.resx">
+      <DependentUpon>Delete Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete\Delete Product.resx">
+      <DependentUpon>Delete Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete\Delete Supplier.resx">
+      <DependentUpon>Delete Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\Edit Categories.resx">
+      <DependentUpon>Edit Categories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit\Edit Products.resx">
       <DependentUpon>Edit Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\Edit Suppliers.resx">
+      <DependentUpon>Edit Suppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\ManagerLogin.resx">
       <DependentUpon>ManagerLogin.cs</DependentUpon>

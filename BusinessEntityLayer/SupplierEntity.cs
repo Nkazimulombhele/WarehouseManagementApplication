@@ -8,6 +8,7 @@ namespace BusinessEntityLayer
 {
     public class SupplierEntity
     {
+        public int supplierId { get; set; }
         public string companyName { get; set; }
         public string contactName { get; set; }
         public string contactTitle { get; set; }

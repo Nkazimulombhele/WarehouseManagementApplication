@@ -100,10 +100,12 @@ namespace WarehouseManagementApplication.Add_New
                     MessageBox.Show("Supplier Inserted Successfully");
                 }
             }
+            Manager_Dashboard home = new Manager_Dashboard();
+            home.ShowDialog();
+            this.Dispose();
 
-            this.Close();
-            Manager_Dashboard manager_Dashboard = new Manager_Dashboard();
-            manager_Dashboard.ShowDialog();
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

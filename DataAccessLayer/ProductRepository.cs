@@ -37,13 +37,13 @@ namespace DataAccessLayer
 
         }
 
-        public int productUpdate(ProductEntity productEntity, int id)
+        public int productUpdate(ProductEntity productEntity)
         {
             cmd.Connection = con;
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "updateProduct_sp";
-
+            cmd.Parameters.AddWithValue("@ProductId", productEntity.productId);
             cmd.Parameters.AddWithValue("@ProductName", productEntity.productName);
             cmd.Parameters.AddWithValue("@SupplierId", productEntity.supplierId);
             cmd.Parameters.AddWithValue("@CategoryId", productEntity.categoryId);
@@ -63,14 +63,14 @@ namespace DataAccessLayer
 
         }
 
-        public int productDelete(int id)
+        public int productDelete(ProductEntity productEntity)
         {
             cmd.Connection = con;
             con.Open();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "deleteProduct_sp";
 
-            cmd.Parameters.AddWithValue("@ProductId", id);
+            cmd.Parameters.AddWithValue("@ProductId", productEntity.productId);
 
             int i = cmd.ExecuteNonQuery();
             return i;

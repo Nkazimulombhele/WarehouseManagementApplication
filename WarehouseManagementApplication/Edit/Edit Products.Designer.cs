@@ -36,7 +36,7 @@ namespace WarehouseManagementApplication.Edit
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUpdateProductDetails = new System.Windows.Forms.Button();
             this.txtUnitInStock = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,15 +46,17 @@ namespace WarehouseManagementApplication.Edit
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUnitsInOrder = new System.Windows.Forms.TextBox();
-            this.cmbSupplierId = new System.Windows.Forms.ComboBox();
-            this.cmbDiscontinued = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtReorderLevel = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantityPerUnit = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtProductId = new System.Windows.Forms.TextBox();
+            this.txtSupplierId = new System.Windows.Forms.TextBox();
+            this.txtCategoryId = new System.Windows.Forms.TextBox();
+            this.txtDiscontinued = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel2
@@ -107,24 +109,25 @@ namespace WarehouseManagementApplication.Edit
             this.btnUpdateProductDetails.TabIndex = 20;
             this.btnUpdateProductDetails.Text = "Update";
             this.btnUpdateProductDetails.UseVisualStyleBackColor = false;
+            this.btnUpdateProductDetails.Click += new System.EventHandler(this.btnUpdateProductDetails_Click);
             // 
             // txtUnitInStock
             // 
-            this.txtUnitInStock.Location = new System.Drawing.Point(531, 236);
+            this.txtUnitInStock.Location = new System.Drawing.Point(555, 290);
             this.txtUnitInStock.Name = "txtUnitInStock";
             this.txtUnitInStock.Size = new System.Drawing.Size(179, 26);
             this.txtUnitInStock.TabIndex = 13;
             // 
-            // textBox2
+            // txtProductName
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 26);
-            this.textBox2.TabIndex = 14;
+            this.txtProductName.Location = new System.Drawing.Point(199, 144);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(179, 26);
+            this.txtProductName.TabIndex = 14;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(175, 230);
+            this.txtUnitPrice.Location = new System.Drawing.Point(199, 284);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(177, 26);
             this.txtUnitPrice.TabIndex = 17;
@@ -133,7 +136,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(397, 239);
+            this.label10.Location = new System.Drawing.Point(421, 293);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(128, 20);
             this.label10.TabIndex = 5;
@@ -143,7 +146,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(20, 177);
+            this.label8.Location = new System.Drawing.Point(44, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(151, 20);
             this.label8.TabIndex = 7;
@@ -153,7 +156,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(57, 233);
+            this.label9.Location = new System.Drawing.Point(81, 287);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 20);
             this.label9.TabIndex = 8;
@@ -163,7 +166,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(73, 139);
+            this.label7.Location = new System.Drawing.Point(97, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 20);
             this.label7.TabIndex = 9;
@@ -173,7 +176,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(44, 95);
+            this.label6.Location = new System.Drawing.Point(68, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 20);
             this.label6.TabIndex = 10;
@@ -194,7 +197,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(425, 139);
+            this.label2.Location = new System.Drawing.Point(449, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 20);
             this.label2.TabIndex = 5;
@@ -202,44 +205,16 @@ namespace WarehouseManagementApplication.Edit
             // 
             // txtUnitsInOrder
             // 
-            this.txtUnitsInOrder.Location = new System.Drawing.Point(176, 277);
+            this.txtUnitsInOrder.Location = new System.Drawing.Point(200, 331);
             this.txtUnitsInOrder.Name = "txtUnitsInOrder";
             this.txtUnitsInOrder.Size = new System.Drawing.Size(177, 26);
             this.txtUnitsInOrder.TabIndex = 13;
-            // 
-            // cmbSupplierId
-            // 
-            this.cmbSupplierId.FormattingEnabled = true;
-            this.cmbSupplierId.Location = new System.Drawing.Point(176, 131);
-            this.cmbSupplierId.Name = "cmbSupplierId";
-            this.cmbSupplierId.Size = new System.Drawing.Size(177, 28);
-            this.cmbSupplierId.TabIndex = 21;
-            // 
-            // cmbDiscontinued
-            // 
-            this.cmbDiscontinued.FormattingEnabled = true;
-            this.cmbDiscontinued.Items.AddRange(new object[] {
-            "yes",
-            "no"});
-            this.cmbDiscontinued.Location = new System.Drawing.Point(176, 339);
-            this.cmbDiscontinued.Name = "cmbDiscontinued";
-            this.cmbDiscontinued.Size = new System.Drawing.Size(177, 28);
-            this.cmbDiscontinued.TabIndex = 21;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(533, 136);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(177, 28);
-            this.comboBox3.TabIndex = 21;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(52, 342);
+            this.label11.Location = new System.Drawing.Point(76, 396);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(119, 20);
             this.label11.TabIndex = 5;
@@ -258,12 +233,13 @@ namespace WarehouseManagementApplication.Edit
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(41, 283);
+            this.label1.Location = new System.Drawing.Point(65, 337);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 20);
             this.label1.TabIndex = 5;
@@ -273,7 +249,7 @@ namespace WarehouseManagementApplication.Edit
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(398, 286);
+            this.label3.Location = new System.Drawing.Point(422, 340);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 20);
             this.label3.TabIndex = 5;
@@ -281,33 +257,72 @@ namespace WarehouseManagementApplication.Edit
             // 
             // txtReorderLevel
             // 
-            this.txtReorderLevel.Location = new System.Drawing.Point(533, 283);
+            this.txtReorderLevel.Location = new System.Drawing.Point(557, 337);
             this.txtReorderLevel.Name = "txtReorderLevel";
             this.txtReorderLevel.Size = new System.Drawing.Size(177, 26);
             this.txtReorderLevel.TabIndex = 13;
             // 
-            // textBox1
+            // txtQuantityPerUnit
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 177);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(534, 26);
-            this.textBox1.TabIndex = 13;
+            this.txtQuantityPerUnit.Location = new System.Drawing.Point(200, 231);
+            this.txtQuantityPerUnit.Name = "txtQuantityPerUnit";
+            this.txtQuantityPerUnit.Size = new System.Drawing.Size(534, 26);
+            this.txtQuantityPerUnit.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(81, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Product Id:";
+            // 
+            // txtProductId
+            // 
+            this.txtProductId.Location = new System.Drawing.Point(199, 104);
+            this.txtProductId.Name = "txtProductId";
+            this.txtProductId.Size = new System.Drawing.Size(179, 26);
+            this.txtProductId.TabIndex = 14;
+            // 
+            // txtSupplierId
+            // 
+            this.txtSupplierId.Location = new System.Drawing.Point(200, 187);
+            this.txtSupplierId.Name = "txtSupplierId";
+            this.txtSupplierId.Size = new System.Drawing.Size(179, 26);
+            this.txtSupplierId.TabIndex = 14;
+            // 
+            // txtCategoryId
+            // 
+            this.txtCategoryId.Location = new System.Drawing.Point(555, 190);
+            this.txtCategoryId.Name = "txtCategoryId";
+            this.txtCategoryId.Size = new System.Drawing.Size(179, 26);
+            this.txtCategoryId.TabIndex = 14;
+            // 
+            // txtDiscontinued
+            // 
+            this.txtDiscontinued.Location = new System.Drawing.Point(200, 390);
+            this.txtDiscontinued.Name = "txtDiscontinued";
+            this.txtDiscontinued.Size = new System.Drawing.Size(177, 26);
+            this.txtDiscontinued.TabIndex = 13;
             // 
             // Edit_Products
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(814, 523);
-            this.Controls.Add(this.cmbDiscontinued);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.cmbSupplierId);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnUpdateProductDetails);
             this.Controls.Add(this.txtReorderLevel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQuantityPerUnit);
+            this.Controls.Add(this.txtDiscontinued);
             this.Controls.Add(this.txtUnitsInOrder);
             this.Controls.Add(this.txtUnitInStock);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtProductId);
+            this.Controls.Add(this.txtCategoryId);
+            this.Controls.Add(this.txtSupplierId);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -317,6 +332,7 @@ namespace WarehouseManagementApplication.Edit
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
@@ -329,6 +345,7 @@ namespace WarehouseManagementApplication.Edit
             this.Name = "Edit_Products";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_AddNewBook";
+            this.Load += new System.EventHandler(this.Edit_Products_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +359,7 @@ namespace WarehouseManagementApplication.Edit
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnUpdateProductDetails;
         private System.Windows.Forms.TextBox txtUnitInStock;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
@@ -352,14 +369,16 @@ namespace WarehouseManagementApplication.Edit
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUnitsInOrder;
-        private System.Windows.Forms.ComboBox cmbSupplierId;
-        private System.Windows.Forms.ComboBox cmbDiscontinued;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnClose;
         private Label label1;
         private TextBox txtReorderLevel;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtQuantityPerUnit;
+        private Label label5;
+        private TextBox txtProductId;
+        private TextBox txtSupplierId;
+        private TextBox txtCategoryId;
+        private TextBox txtDiscontinued;
     }
 }

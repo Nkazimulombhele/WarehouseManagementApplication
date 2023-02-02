@@ -8,8 +8,9 @@ namespace BusinessEntityLayer
 {
     public class CategoryEntity
     {
+        public int categoryId { get; set; }
         public string categoryname { get; set; }
         public string description { get; set; }
-        public string picture { get; set; }
+        public Byte picture { get; set; }
     }
 }
