@@ -40,9 +40,11 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.btnAddCategories = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,6 +80,7 @@ namespace WarehouseManagementApplication.Manager_Controls
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 546);
             this.panel1.Name = "panel1";
@@ -153,6 +156,34 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.panel6.Size = new System.Drawing.Size(965, 469);
             this.panel6.TabIndex = 14;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Location = new System.Drawing.Point(132, 439);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(133, 30);
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEdit.Location = new System.Drawing.Point(0, 439);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(132, 30);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -169,33 +200,16 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.dataGridView1.Size = new System.Drawing.Size(965, 439);
             this.dataGridView1.TabIndex = 0;
             // 
-            // btnEdit
+            // label1
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEdit.Location = new System.Drawing.Point(0, 439);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(132, 30);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Location = new System.Drawing.Point(132, 439);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(133, 30);
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label1.Location = new System.Drawing.Point(7, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Copyrights © 2023.";
             // 
             // UC_ManageCategories
             // 
@@ -210,6 +224,8 @@ namespace WarehouseManagementApplication.Manager_Controls
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Name = "UC_ManageCategories";
             this.Size = new System.Drawing.Size(985, 580);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -232,5 +248,6 @@ namespace WarehouseManagementApplication.Manager_Controls
         private Button btnRefresh;
         private Button btnDelete;
         private Button btnEdit;
+        private Label label1;
     }
 }

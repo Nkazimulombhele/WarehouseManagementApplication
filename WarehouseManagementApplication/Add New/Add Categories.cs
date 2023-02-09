@@ -24,24 +24,23 @@ namespace WarehouseManagementApplication.Add_New
             InitializeComponent();
         }
         
-        string imgLocation = "";
+       string imgLocation = "";
         
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            
-        
+                         
                OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|all files(*.*)|*.*";
 
-              if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+              if (ofd.ShowDialog() == DialogResult.OK)
               {
                 imgLocation = ofd.FileName.ToString();
                 PictureUploadBox.ImageLocation = imgLocation;
+             
              }
 
-                  
         }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
         
@@ -56,28 +55,28 @@ namespace WarehouseManagementApplication.Add_New
                 MessageBox.Show("Description Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //if (PictureUploadBox.Text.Equals(string.Empty))
-            //{
-            //    MessageBox.Show("Category Picture not Uploaded!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-            
+            if (imgLocation.Equals(string.Empty))
+            {
+                MessageBox.Show("Category Picture not Uploaded!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (btnSave.Text == "Save")
             {
                 byte[] images = null;
                 FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
                 BinaryReader brs = new BinaryReader(Streem);
-                images = brs.ReadBytes((int)Streem.Length);
+                images = brs.ReadBytes((byte)Streem.Length);
 
                 _categoryEntity.categoryname = txtCategoryName.Text;
                 _categoryEntity.description = txtDescription.Text;
-                _categoryEntity.picture = Convert.ToByte(images.Length);
+                _categoryEntity.picture = images;
 
-                if (_categoryBusinessAccess.categoryinsertDetails(_categoryEntity) > 0)
+                if(_categoryBusinessAccess.categoryinsertDetails(_categoryEntity) >0)
                 {
-                    MessageBox.Show("Category Inserted Successfully");
-                }
-              
+                    
+                    MessageBox.Show("Category Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }         
                
             }
             Manager_Dashboard home = new Manager_Dashboard();
@@ -85,6 +84,8 @@ namespace WarehouseManagementApplication.Add_New
             this.Dispose();
 
         }
+
+    
 
         private void btnClose_Click(object sender, EventArgs e)
         {

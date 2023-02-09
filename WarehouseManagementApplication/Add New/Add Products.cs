@@ -86,7 +86,8 @@ namespace WarehouseManagementApplication.Add_New
 
                 if (_productBusinessAccess.productinsertDetails(_productEntity) > 0)
                 {
-                    MessageBox.Show("Product Inserted Successfully");
+                   
+                    MessageBox.Show("Product Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
 

@@ -25,6 +25,11 @@ namespace WarehouseManagementApplication.Delete
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (txtCategoryId.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Category Id Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             MessageBox.Show("Are you sure you want to delete this Category!!", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
@@ -35,7 +40,7 @@ namespace WarehouseManagementApplication.Delete
                     _categoryEntity.categoryId = Convert.ToInt32(txtCategoryId.Text);
 
 
-                    if (_categoryBusinessAccess.categorydeleteDetails(_categoryEntity) < 0)
+                    if (_categoryBusinessAccess.categorydeleteDetails(_categoryEntity) > 0)
                     {
                         MessageBox.Show("Category Deleted Successfully");
                     }

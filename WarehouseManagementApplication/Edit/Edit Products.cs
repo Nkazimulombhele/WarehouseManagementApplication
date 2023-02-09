@@ -34,6 +34,11 @@ namespace WarehouseManagementApplication.Edit
 
         private void btnUpdateProductDetails_Click(object sender, EventArgs e)
         {
+            if (txtProductId.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Product Id Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (btnUpdateProductDetails.Text == "Update")
             {
                 _productEntity.productId = Convert.ToInt32(txtProductId.Text);
@@ -50,7 +55,8 @@ namespace WarehouseManagementApplication.Edit
 
                 if (_productBusinessAccess.productupdateDetails(_productEntity) != 0)
                 {
-                    MessageBox.Show("Product Updated Successfully");
+                    
+                    MessageBox.Show("Product Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             Manager_Dashboard home = new Manager_Dashboard();

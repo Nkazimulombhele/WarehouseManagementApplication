@@ -31,6 +31,11 @@ namespace WarehouseManagementApplication.Edit
 
         private void btnUpdateSupplierDetails_Click(object sender, EventArgs e)
         {
+            if (txtSupplierId.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Supplier Id Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (btnUpdateSupplierDetails.Text == "Update")
             {
                 _supplierEntity.supplierId = Convert.ToInt32(txtSupplierId.Text);
@@ -49,7 +54,8 @@ namespace WarehouseManagementApplication.Edit
 
                 if (_supplierBusinessAccess.supplierUpdateDetails(_supplierEntity) != 0)
                 {
-                    MessageBox.Show("Supplier Updated Successfully");
+                  
+                    MessageBox.Show("Supplier Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
               
             }

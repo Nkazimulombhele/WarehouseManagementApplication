@@ -11,6 +11,6 @@ namespace BusinessEntityLayer
         public int categoryId { get; set; }
         public string categoryname { get; set; }
         public string description { get; set; }
-        public Byte picture { get; set; }
+        public byte[] picture { get; set; }
     }
 }

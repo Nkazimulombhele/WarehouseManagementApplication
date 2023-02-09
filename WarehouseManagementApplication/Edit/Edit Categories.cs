@@ -22,21 +22,29 @@ namespace WarehouseManagementApplication.Edit
         {
             InitializeComponent();
         }
+        string imgLocation = "";
         private void btnUpload_Click(object sender, EventArgs e)
         {
-
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|all files(*.*)|*.*";
 
-            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
                 imgLocation = ofd.FileName.ToString();
                 PictureUploadBox.ImageLocation = imgLocation;
+
             }
+
         }
-        string imgLocation = "";
+     
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (txtCategoryId.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Category Id Field is Empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (btnUpdate.Text == "Update")
             {
                 byte[] images = null;
@@ -47,15 +55,14 @@ namespace WarehouseManagementApplication.Edit
                 _categoryEntity.categoryId = Convert.ToInt32(txtCategoryId.Text);
                     _categoryEntity.categoryname = txtCategoryName.Text;
                     _categoryEntity.description = txtDescription.Text;
-                    _categoryEntity.picture = Convert.ToByte(images.Length);
+                _categoryEntity.picture = images;
 
                     if (_categoryBusinessAccess.categoryupdateDetails(_categoryEntity) > 0)
                     {
-                        MessageBox.Show("Category Updated Successfully");
+                       
+                        MessageBox.Show("Category Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
 
-                
-            
             }
             Manager_Dashboard home = new Manager_Dashboard();
             home.ShowDialog();

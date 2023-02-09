@@ -32,15 +32,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.TotalProductCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.TotalCategoryCount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.TotalSupplierCount = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +67,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.TotalProductCount);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(29, 180);
             this.panel1.Name = "panel1";
@@ -84,16 +84,16 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // TotalProductCount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(55, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "1000";
+            this.TotalProductCount.AutoSize = true;
+            this.TotalProductCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.TotalProductCount.ForeColor = System.Drawing.Color.White;
+            this.TotalProductCount.Location = new System.Drawing.Point(55, 81);
+            this.TotalProductCount.Name = "TotalProductCount";
+            this.TotalProductCount.Size = new System.Drawing.Size(21, 24);
+            this.TotalProductCount.TabIndex = 0;
+            this.TotalProductCount.Text = "1";
             // 
             // label3
             // 
@@ -111,7 +111,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Crimson;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.TotalCategoryCount);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(324, 180);
             this.panel2.Name = "panel2";
@@ -128,16 +128,16 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // TotalCategoryCount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(56, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "1234";
+            this.TotalCategoryCount.AutoSize = true;
+            this.TotalCategoryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.TotalCategoryCount.ForeColor = System.Drawing.Color.White;
+            this.TotalCategoryCount.Location = new System.Drawing.Point(56, 81);
+            this.TotalCategoryCount.Name = "TotalCategoryCount";
+            this.TotalCategoryCount.Size = new System.Drawing.Size(21, 24);
+            this.TotalCategoryCount.TabIndex = 0;
+            this.TotalCategoryCount.Text = "2";
             // 
             // label6
             // 
@@ -155,7 +155,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.TotalSupplierCount);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(630, 180);
             this.panel3.Name = "panel3";
@@ -172,16 +172,16 @@
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // label7
+            // TotalSupplierCount
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(67, 81);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "512";
+            this.TotalSupplierCount.AutoSize = true;
+            this.TotalSupplierCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.TotalSupplierCount.ForeColor = System.Drawing.Color.White;
+            this.TotalSupplierCount.Location = new System.Drawing.Point(67, 81);
+            this.TotalSupplierCount.Name = "TotalSupplierCount";
+            this.TotalSupplierCount.Size = new System.Drawing.Size(21, 24);
+            this.TotalSupplierCount.TabIndex = 0;
+            this.TotalSupplierCount.Text = "1";
             // 
             // label8
             // 
@@ -225,15 +225,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label TotalProductCount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label TotalCategoryCount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label TotalSupplierCount;
         private System.Windows.Forms.Label label8;
     }
 }

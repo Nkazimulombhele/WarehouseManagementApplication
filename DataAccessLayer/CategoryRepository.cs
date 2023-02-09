@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessEntityLayer;
+using System.IO;
 
 namespace DataAccessLayer
 {
@@ -14,6 +15,8 @@ namespace DataAccessLayer
         public SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WarehouseManagementDB;Integrated Security=True");
         public SqlCommand cmd = new SqlCommand();
 
+     
+        
         public int categoryinsert(CategoryEntity categoryEntity)
         {
             cmd.Connection = con;
@@ -24,10 +27,11 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@CategoryName", categoryEntity.categoryname);
             cmd.Parameters.AddWithValue("@Description", categoryEntity.description);
             cmd.Parameters.AddWithValue("@Picture", categoryEntity.picture);
-            con.Close();
 
-            return cmd.ExecuteNonQuery();
-           
+
+           return cmd.ExecuteNonQuery();
+            
+
         }
 
         public int categoryUpdate(CategoryEntity categoryEntity)
@@ -41,8 +45,9 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@Description", categoryEntity.description);
             cmd.Parameters.AddWithValue("@Picture", categoryEntity.picture);
 
-              return  cmd.ExecuteNonQuery();
-           
+            int i = cmd.ExecuteNonQuery();
+            return i;
+
         }
 
         public int categoryDelete(CategoryEntity categoryEntity)

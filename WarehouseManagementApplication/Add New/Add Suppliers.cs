@@ -97,7 +97,8 @@ namespace WarehouseManagementApplication.Add_New
 
                 if (_supplierBusinessAccess.supplierinsertDetails(_supplierEntity) > 0)
                 {
-                    MessageBox.Show("Supplier Inserted Successfully");
+                 
+                    MessageBox.Show("Supplier Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             Manager_Dashboard home = new Manager_Dashboard();
