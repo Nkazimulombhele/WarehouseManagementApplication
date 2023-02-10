@@ -47,8 +47,8 @@ namespace WarehouseManagementApplication.Edit
                 _productEntity.categoryId = Convert.ToInt32(txtCategoryId.Text);
                 _productEntity.quantityPerUnit = txtQuantityPerUnit.Text;
                 _productEntity.unitPrice = Convert.ToInt32(txtUnitPrice.Text);
-                _productEntity.unitsInStock = Convert.ToInt32(txtUnitInStock);
-                _productEntity.unitsOnOrder = Convert.ToInt32(txtUnitsInOrder);
+                _productEntity.unitsInStock = Convert.ToInt32(txtUnitInStock.Text);
+                _productEntity.unitsOnOrder = Convert.ToInt32(txtUnitsInOrder.Text);
                 _productEntity.reorderLevel = Convert.ToInt32(txtReorderLevel.Text);
                 _productEntity.discontinued = txtDiscontinued.Text;
 
